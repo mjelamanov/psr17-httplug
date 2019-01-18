@@ -1,0 +1,26 @@
+language: php
+
+sudo: false
+
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+  - 7.3
+  - nightly
+
+branches:
+  only:
+    - master
+
+before_script:
+  - composer install --no-interaction --prefer-source
+
+script: composer test
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_OAUTH_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
