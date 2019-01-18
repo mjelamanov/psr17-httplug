@@ -1,5 +1,8 @@
 # PSR-17 adapter for httplug's message factory
 
+[![Build Status](https://travis-ci.com/mjelamanov/psr17-httplug.svg?branch=master)](https://travis-ci.com/mjelamanov/psr17-httplug)
+[![StyleCI](https://github.styleci.io/repos/165729612/shield?branch=master)](https://github.styleci.io/repos/165729612)
+
 A PSR-17 adapter for [php-http/message-factory](https://github.com/php-http/message-factory)
 
 This package provides all implementations of the PSR-18 except for ``` Psr\Http\Message\ServerRequestFactoryInterface ```
