@@ -10,15 +10,14 @@ use Interop\Http\Factory\RequestFactoryTestCase;
 use Psr\Http\Message\UriFactoryInterface;
 
 /**
- * Class RequestFactoryTest
+ * Class RequestFactoryTest.
  *
- * @package Mjelamanov\Psr17Httplug
  * @author Mirlan Jelamanov <mirlan.jelamanov@gmail.com>
  */
 class RequestFactoryTest extends RequestFactoryTestCase
 {
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function createRequestFactory()
     {
@@ -26,7 +25,7 @@ class RequestFactoryTest extends RequestFactoryTestCase
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function createUri($uri)
     {

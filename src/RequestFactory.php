@@ -7,9 +7,8 @@ use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 
 /**
- * Class RequestFactoryAbstract
+ * Class RequestFactoryAbstract.
  *
- * @package Mjelamanov\Psr17Httplug
  * @author Mirlan Jelamanov <mirlan.jelamanov@gmail.com>
  */
 class RequestFactory implements RequestFactoryInterface
@@ -30,7 +29,7 @@ class RequestFactory implements RequestFactoryInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function createRequest(string $method, $uri): RequestInterface
     {

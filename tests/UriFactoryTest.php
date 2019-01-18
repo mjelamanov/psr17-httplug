@@ -7,15 +7,14 @@ use Http\Message\UriFactory\GuzzleUriFactory;
 use Interop\Http\Factory\UriFactoryTestCase;
 
 /**
- * Class UriFactoryTest
+ * Class UriFactoryTest.
  *
- * @package Mjelamanov\Psr17Httplug
  * @author Mirlan Jelamanov <mirlan.jelamanov@gmail.com>
  */
 class UriFactoryTest extends UriFactoryTestCase
 {
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function createUriFactory()
     {

@@ -7,9 +7,8 @@ use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * Class ResponseFactoryAbstract
+ * Class ResponseFactoryAbstract.
  *
- * @package Mjelamanov\Psr17Httplug
  * @author Mirlan Jelamanov <mirlan.jelamanov@gmail.com>
  */
 class ResponseFactory implements ResponseFactoryInterface
@@ -30,7 +29,7 @@ class ResponseFactory implements ResponseFactoryInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function createResponse(int $code = 200, string $reasonPhrase = ''): ResponseInterface
     {
