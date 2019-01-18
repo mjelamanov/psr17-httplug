@@ -7,15 +7,14 @@ use Http\Message\ResponseFactory as HttplugResponseFactory;
 use Interop\Http\Factory\ResponseFactoryTestCase;
 
 /**
- * Class ResponseFactoryTest
+ * Class ResponseFactoryTest.
  *
- * @package Mjelamanov\Psr17Httplug
  * @author Mirlan Jelamanov <mirlan.jelamanov@gmail.com>
  */
 class ResponseFactoryTest extends ResponseFactoryTestCase
 {
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function createResponseFactory()
     {

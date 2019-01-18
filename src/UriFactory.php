@@ -7,9 +7,8 @@ use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * Class UriFactory
+ * Class UriFactory.
  *
- * @package Mjelamanov\Psr17Httplug
  * @author Mirlan Jelamanov <mirlan.jelamanov@gmail.com>
  */
 class UriFactory implements UriFactoryInterface
@@ -30,7 +29,7 @@ class UriFactory implements UriFactoryInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function createUri(string $uri = ''): UriInterface
     {

@@ -7,15 +7,14 @@ use Http\Message\StreamFactory\GuzzleStreamFactory;
 use Interop\Http\Factory\StreamFactoryTestCase;
 
 /**
- * Class StreamFactoryTest
+ * Class StreamFactoryTest.
  *
- * @package Mjelamanov\Psr17Httplug
  * @author Mirlan Jelamanov <mirlan.jelamanov@gmail.com>
  */
 class StreamFactoryTest extends StreamFactoryTestCase
 {
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function createStreamFactory()
     {

@@ -7,9 +7,8 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
 
 /**
- * Class StreamFactory
+ * Class StreamFactory.
  *
- * @package Mjelamanov\Psr17Httplug
  * @author Mirlan Jelamanov <mirlan.jelamanov@gmail.com>
  */
 class StreamFactory implements StreamFactoryInterface
@@ -30,7 +29,7 @@ class StreamFactory implements StreamFactoryInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function createStream(string $content = ''): StreamInterface
     {
@@ -38,7 +37,7 @@ class StreamFactory implements StreamFactoryInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function createStreamFromFile(string $filename, string $mode = 'r'): StreamInterface
     {
@@ -46,7 +45,7 @@ class StreamFactory implements StreamFactoryInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function createStreamFromResource($resource): StreamInterface
     {
