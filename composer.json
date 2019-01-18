@@ -1,0 +1,44 @@
+{
+    "name": "mjelamanov/psr17-httplug",
+    "description": "A PSR-17 adapter for httplug's message factory",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "psr-17", "http", "factory", "php-http", "message"
+    ],
+    "authors": [
+        {
+          "name": "Mirlan Jelamanov",
+          "email": "mirlan.jelamanov@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "psr/http-factory": "^1.0",
+        "php-http/message-factory": "^1.0"
+    },
+    "require-dev": {
+        "http-interop/http-factory-tests": "^0.5.0",
+        "php-http/message": "^1.7",
+        "guzzlehttp/psr7": "^1.5"
+    },
+    "provide": {
+        "psr/http-factory": "^1.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Mjelamanov\\Psr17Httplug\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mjelamanov\\Psr17Httplug\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit -c phpunit.xml.dist"
+    }
+}
