@@ -7,7 +7,7 @@ php:
   - 7.1
   - 7.2
   - 7.3
-  - nightly
+  - 7.4snapshot
 
 branches:
   only:
@@ -17,10 +17,3 @@ before_script:
   - composer install --no-interaction --prefer-source
 
 script: composer test
-
-deploy:
-  provider: releases
-  api_key: $GITHUB_OAUTH_TOKEN
-  skip_cleanup: true
-  on:
-    tags: true
