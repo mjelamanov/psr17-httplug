@@ -3,8 +3,10 @@
 namespace Mjelamanov\Psr17Httplug;
 
 use Http\Message\StreamFactory as HttplugStreamFactory;
+use InvalidArgumentException;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
+use RuntimeException;
 
 /**
  * Class StreamFactory.
@@ -41,7 +43,19 @@ class StreamFactory implements StreamFactoryInterface
      */
     public function createStreamFromFile(string $filename, string $mode = 'r'): StreamInterface
     {
-        return $this->createStreamFromResource(fopen($filename, $mode));
+        $resource = @fopen($filename, $mode);
+        $errors = error_get_last();
+        error_clear_last();
+
+        if ($errors) {
+            if (strpos($errors['message'], 'mode') !== false) {
+                throw new InvalidArgumentException("Invalid mode {$mode} given");
+            }
+
+            throw new RuntimeException("File {$filename} does not exist");
+        }
+
+        return $this->createStreamFromResource($resource);
     }
 
     /**
