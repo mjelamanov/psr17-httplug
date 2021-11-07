@@ -43,7 +43,12 @@ class StreamFactory implements StreamFactoryInterface
      */
     public function createStreamFromFile(string $filename, string $mode = 'r'): StreamInterface
     {
-        $resource = @fopen($filename, $mode);
+        try {
+            $resource = @fopen($filename, $mode);
+        } catch (\Error $e) {
+            throw new RuntimeException("File {$filename} does not exist", 0, $e);
+        }
+
         $errors = error_get_last();
         error_clear_last();
 
